@@ -1,3 +1,4 @@
+
 {
   "frozen_before_final_test": true,
   "frozen_date": "2026-10-27",
@@ -24,5 +25,10 @@
     "src/models.py": "72dd752c87b062558646df1fb1123de6ec00f0608777516af651bd484f78866f",
     "src/run_experiment.py": "cd9bbd352203630de03ef3eca76cb635222fbefc1f6ea93298a97e29b61737ff",
     "data/car.data": "b703a9ac69f11e64ce8c223c0a40de4d2e9d769f7fb20be5f8f2e8a619893d83"
+  },
+  "current_source_verification": {
+    "file": "src/run_experiment.py",
+    "sha256": "403be1407239a732486823ab32c95ab104753033e6a5210d73b0cc4de4249486",
+    "note": "Current source file hash. The original frozen methodology hash is retained for historical reproducibility."
   }
 }
