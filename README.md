@@ -55,4 +55,4 @@ See `src/run_experiment.py --help` for supported options before running final-ho
 
 ## Data source
 
-Bohanec, M. (1988) *Car Evaluation* [dataset]. UCI Machine Learning Repository. https://doi.org/10.24432/C5JP48
+Bohanec, M. (1988) *Car Evaluation* [dataset]. UCI Machine Learning Repository. https://doi.org/10.24432/C5JP48, https://archive.ics.uci.edu/dataset/19/car+evaluation
