@@ -1,3 +1,5 @@
+![Flat vs Hierarchical Rule-Based Classification](figures/research_cover.png)
+
 # Car Acceptability: Flat and Hierarchical Rule-Based Classification
 
 CPU5006 — Assessment 1 | Bath Spa University
