@@ -357,7 +357,5 @@ The methodological record is retained in [`METHODOLOGY_FROZEN.json`](METHODOLOGY
 
 Bohanec, M. (1988) *Car Evaluation* [dataset]. UCI Machine Learning Repository. Available at: https://doi.org/10.24432/C5JP48
 
----
 
-*CPU5006 Assessment 1  -  Rule-Based AI Experiments. This README describes the actual implementation, recorded evaluations and their limitations; it is not a claim of universal model superiority.*
 
