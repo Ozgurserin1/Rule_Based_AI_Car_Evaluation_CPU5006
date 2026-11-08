@@ -195,7 +195,7 @@ The small minority-class supports (14 and 13 cases) make individual recall estim
 
 ![Per-class recall](figures/figure_2_per_class_recall.png)
 
-*Figure 2. Per-class recall on the final holdout.*
+
 
 | Flat model | Hierarchical model |
 |:--:|:--:|
