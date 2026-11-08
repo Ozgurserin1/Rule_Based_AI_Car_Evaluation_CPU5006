@@ -197,11 +197,13 @@ The small minority-class supports (14 and 13 cases) make individual recall estim
 
 
 
+*Figures 3-4. Confusion matrices for the two classifiers.*
+
 | Flat model | Hierarchical model |
 |:--:|:--:|
 | ![Flat confusion matrix](figures/figure_3_confusion_matrix.png) | ![Hierarchical confusion matrix](figures/figure_4_confusion_matrix.png) |
 
-*Figures 3-4. Confusion matrices for the two classifiers.*
+
 
 An existing combined overview is also retained below:
 
