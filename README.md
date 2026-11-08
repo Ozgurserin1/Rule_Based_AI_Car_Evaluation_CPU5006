@@ -6,7 +6,7 @@
 
 **Institution:** Bath Spa University  
 **Module:** Artificial Intelligence (CPU5006-20P)  
-**Assessment:** Assessment 1 â€” Rule-Based AI Experiments  
+**Assessment:** Assessment 1  -  Rule-Based AI Experiments  
 **Researcher:** Ozgur Serin  
 **Language:** Python  
 **Dataset:** [UCI Car Evaluation](https://doi.org/10.24432/C5JP48)
@@ -17,7 +17,7 @@
 
 This project develops and evaluates two **transparent, rule-based classifiers** for predicting car acceptability. Both models operate on the same six categorical vehicle attributes, but they represent decisions differently:
 
-- **Flat rule-based classifier:** learns an ordered list of IFâ€“THEN rules by sequential covering of labelled training examples.
+- **Flat rule-based classifier:** learns an ordered list of IF-THEN rules by sequential covering of labelled training examples.
 - **Hierarchical rule-based classifier:** uses researcher-defined intermediate `PRICE`, `COMFORT`, and `TECH` rules, then learns a final label lookup from the training data.
 
 The objective is not simply to maximise accuracy, but to investigate the trade-offs between rule structure, classification performance, minority-class recognition and interpretability. The project includes a **fixed held-out test set**, **five exploratory repeated splits**, **an additional representation comparison**, saved results and unit tests.
@@ -63,7 +63,7 @@ The distribution is imbalanced: a model can achieve apparently strong overall ac
 
 The data-loading routine in `src/run_experiment.py` also checks the expected dimensions, missing values, duplicate feature combinations and valid class labels.
 
-## 4. Algorithm A â€” Flat rule-based classifier
+## 4. Algorithm A  -  Flat rule-based classifier
 
 **Implementation:** [`src/models.py`](src/models.py), class `FlatRuleClassifier`.
 
@@ -89,7 +89,7 @@ The actual learned rule set depends on the training partition. The `explain()` m
 **Strengths:** data-derived rules, readable decisions, explicit ordering.  
 **Limitations:** rule ordering and the majority-class fallback affect predictions; candidate coverage and purity constraints may disadvantage uncommon patterns.
 
-## 5. Algorithm B â€” Hierarchical rule-based classifier
+## 5. Algorithm B  -  Hierarchical rule-based classifier
 
 **Implementation:** [`src/models.py`](src/models.py), class `HierarchicalRuleClassifier`.
 
@@ -147,7 +147,7 @@ These repetitions provide a **sensitivity / stability check**, not five independ
 
 A supplementary script compares a flat classifier trained on the original six features against a flat classifier trained on derived `PRICE`, `COMFORT`, and `TECH` representation values. The second representation is computed from the hierarchical model's intermediate rules. This is an exploratory probe of representation effects; **it is not a direct replacement for the main flat-versus-hierarchical evaluation**.
 
-## 7. Main results â€” fixed holdout
+## 7. Main results  -  fixed holdout
 
 **Test set:** 346 records, stratified 20% holdout, seed 42. Values below are taken from `outputs/FINAL_holdout_results.json` and `outputs/final_summary.csv`.
 
@@ -202,7 +202,7 @@ The small minority-class supports (14 and 13 cases) make individual recall estim
 |:--:|:--:|
 | ![Flat confusion matrix](figures/figure_3_confusion_matrix.png) | ![Hierarchical confusion matrix](figures/figure_4_confusion_matrix.png) |
 
-*Figures 3â€“4. Confusion matrices for the two classifiers.*
+*Figures 3-4. Confusion matrices for the two classifiers.*
 
 An existing combined overview is also retained below:
 
@@ -255,37 +255,37 @@ The supplementary [`run_controlled.py`](run_controlled.py) experiment compares t
 
 ```text
 Rule_Based_AI_Car_Evaluation_CPU5006/
-â”œâ”€â”€ README.md
-â”œâ”€â”€ requirements.txt
-â”œâ”€â”€ data/
-â”‚   â”œâ”€â”€ car.data
-â”‚   â””â”€â”€ car.c45-names
-â”œâ”€â”€ src/
-â”‚   â”œâ”€â”€ models.py
-â”‚   â””â”€â”€ run_experiment.py
-â”œâ”€â”€ tests/
-â”‚   â””â”€â”€ test_models.py
-â”œâ”€â”€ outputs/
-â”‚   â”œâ”€â”€ FINAL_holdout_results.json
-â”‚   â”œâ”€â”€ development_validation.json
-â”‚   â”œâ”€â”€ final_summary.csv
-â”‚   â”œâ”€â”€ final_per_class.csv
-â”‚   â”œâ”€â”€ repeated_split_results.csv
-â”‚   â”œâ”€â”€ repeated_split_summary.json
-â”‚   â””â”€â”€ controlled_representation_results.csv
-â”œâ”€â”€ figures/
-â”‚   â”œâ”€â”€ research_cover.png
-â”‚   â”œâ”€â”€ figure_1_model_comparison.png
-â”‚   â”œâ”€â”€ figure_2_per_class_recall.png
-â”‚   â”œâ”€â”€ figure_3_confusion_matrix.png
-â”‚   â””â”€â”€ figure_4_confusion_matrix.png
-â”œâ”€â”€ Experimental Results_ Rules and Confusion Matrices (1).png
-â”œâ”€â”€ make_figures.py
-â”œâ”€â”€ run_additional.py
-â”œâ”€â”€ run_controlled.py
-â”œâ”€â”€ METHODOLOGY_FROZEN.json
-â”œâ”€â”€ DATASET_SHA256.txt
-â””â”€â”€ FILE_CHECKSUMS.txt
+|-- README.md
+|-- requirements.txt
+|-- data/
+|   |-- car.data
+|   \-- car.c45-names
+|-- src/
+|   |-- models.py
+|   \-- run_experiment.py
+|-- tests/
+|   \-- test_models.py
+|-- outputs/
+|   |-- FINAL_holdout_results.json
+|   |-- development_validation.json
+|   |-- final_summary.csv
+|   |-- final_per_class.csv
+|   |-- repeated_split_results.csv
+|   |-- repeated_split_summary.json
+|   \-- controlled_representation_results.csv
+|-- figures/
+|   |-- research_cover.png
+|   |-- figure_1_model_comparison.png
+|   |-- figure_2_per_class_recall.png
+|   |-- figure_3_confusion_matrix.png
+|   \-- figure_4_confusion_matrix.png
+|-- Experimental Results_ Rules and Confusion Matrices (1).png
+|-- make_figures.py
+|-- run_additional.py
+|-- run_controlled.py
+|-- METHODOLOGY_FROZEN.json
+|-- DATASET_SHA256.txt
+\-- FILE_CHECKSUMS.txt
 ```
 
 `src/models.py` contains the two classifier implementations; `src/run_experiment.py` handles the main splits and saved evaluation. The scripts at the repository root handle additional analysis and figure generation. CSV and JSON outputs are included so results can be examined without rerunning the final holdout.
@@ -319,7 +319,7 @@ python src/run_experiment.py
 
 This writes `outputs/development_validation.json`. It **does not evaluate the sealed holdout**.
 
-### Main final-holdout mode â€” archival / deliberate use only
+### Main final-holdout mode  -  archival / deliberate use only
 
 ```bash
 python src/run_experiment.py --final-test
@@ -359,5 +359,5 @@ Bohanec, M. (1988) *Car Evaluation* [dataset]. UCI Machine Learning Repository. 
 
 ---
 
-*CPU5006 Assessment 1 â€” Rule-Based AI Experiments. This README describes the actual implementation, recorded evaluations and their limitations; it is not a claim of universal model superiority.*
+*CPU5006 Assessment 1  -  Rule-Based AI Experiments. This README describes the actual implementation, recorded evaluations and their limitations; it is not a claim of universal model superiority.*
 
