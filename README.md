@@ -205,10 +205,6 @@ The small minority-class supports (14 and 13 cases) make individual recall estim
 
 
 
-An existing combined overview is also retained below:
-
-![Experimental classification results](Experimental%20Results_%20Rules%20and%20Confusion%20Matrices%20%281%29.png)
-
 ## 8. Additional exploratory results
 
 ### Five paired splits
