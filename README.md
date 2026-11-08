@@ -192,7 +192,6 @@ The small minority-class supports (14 and 13 cases) make individual recall estim
 
 ![Final holdout model comparison](figures/figure_1_model_comparison.png)
 
-*Figure 1. Model comparison generated from saved experimental results.*
 
 ![Per-class recall](figures/figure_2_per_class_recall.png)
 
